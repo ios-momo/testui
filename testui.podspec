@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 	spec.name         = "testui"
-	spec.version      = "0.0.6"
+	spec.version      = "0.0.7"
 	spec.summary      = "Alyce Pose Ui framework"
 	spec.description  = <<-DESC
 Pose estimation and evaluation kit
@@ -12,8 +12,11 @@ Pose estimation and evaluation kit
 	spec.license      = { :type => "MIT", :file => "LICENSE" }
   	spec.author             = { "ryan" => "dev.ryan.cha@gmail.com" }
 	spec.ios.deployment_target = "14.0"
+
 	spec.source       = { :git => "https://github.com/ios-momo/testui.git", :tag => "#{spec.version}" }
 	spec.source_files  = "testui/testui.h", "testui/TestUIObject.swift"
+	spec.vendored_frameworks = 'Frameworks/AlycePoseCore.xcframework'
+
 	spec.dependency 'Alamofire', '~> 5.6.2'
 	spec.dependency 'TensorFlowLiteSwift', '2.12.0'
 	spec.dependency 'TensorFlowLiteSwift/CoreML', '2.12.0'
