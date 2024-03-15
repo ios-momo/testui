@@ -19,68 +19,68 @@ import os
 import AlycePoseCore
 
 final class SampleViewViewController: UIViewController{
-    
+
     // MARK: Storyboards Connections
     @IBOutlet private weak var txtCount: UILabel!
     @IBOutlet private weak var scoreLabel: UILabel!
 //    @IBOutlet private weak var txtFeedback: UILabel!
     @IBOutlet private weak var overlayView: OverlayView!
     @IBOutlet private weak var videoView: UIView!
-    
+
     private let minimumScore = Constant.shared.MIN_PERSON_SCORE
-    
+
     internal var exerciseId: Int?
-    
+
     // MARK: Visualization
     private var imageViewFrame: CGRect?
     private var overlayImage: OverlayView?
-    
+
     // MARK: Controllers that manage functionality
     private var alycepose: AlycePose?
     private var cameraFeedManager: CameraFeedManager!
-    
+
     // Serial queue to control all tasks related to the TFLite model.
     private let queue = DispatchQueue(label: "serial_queue")
-    
+
     // Flag to make sure there's only one frame processed at each moment.
     private var isRunning = false
-    
+
     // video
     private var player:AVQueuePlayer?
     private var playerLayer: AVPlayerLayer?
     private var playerLooper:AVPlayerLooper?
-    
+
     // exercise state
     private var currentCount:Int = 0
-    
+
     // MARK: View Handling Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         loadModel()
         configCameraCapture()
-        
+
 //        configVideoPlayer()
         self.txtCount.layer.masksToBounds = true
         self.txtCount.layer.cornerRadius = 50
-        
+
         NSLog("AlycePose version=\(AlycePoseInfo().VERSION_NAME)")
-        
+
         // reset counter
         self.currentCount = 0
         self.txtCount.text = "0"
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         player?.rate = 1.0
         DispatchQueue.global().async {
             self.cameraFeedManager?.startRunning()
         }
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
@@ -98,14 +98,14 @@ final class SampleViewViewController: UIViewController{
         imageViewFrame = overlayView.frame
         playerLayer?.frame = videoView.bounds
     }
-    
+
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return [.landscapeLeft, .landscapeRight]
     }
 
     private func configVideoPlayer() {
         L.i("main", "configVideoPlayer()")
-        
+
         DispatchQueue.main.async {
             guard let exId = self.exerciseId else {
                 L.i("main", "getExercise(exerciseId) failed: exerciseId is not set")
@@ -118,7 +118,6 @@ final class SampleViewViewController: UIViewController{
                     // Play exercise video
                     if let exercise = exerciseDef {
                         L.i("main", "video url = \(exercise.exerciseVideo)")
-
                         let url = URL(string: exercise.exerciseVideo)!
                         let playerItem = AVPlayerItem(url: url)
                         self.player = AVQueuePlayer(playerItem: playerItem)
@@ -132,12 +131,28 @@ final class SampleViewViewController: UIViewController{
                     } else {
                         L.i("main", "getExercise(\(exId)) failed: API error")
                     }
+
+                    DispatchQueue.main.async {
+                        self.scoreLabel.text = "판정 점수 : 0점"
+                        // setMode: Exercise
+                        if let exId = self.exerciseId {
+                            try? self.alycepose?.setMode(mode: .Exercise,
+                                                         exerciseId: exId,
+                                                         exerciseListener: self
+                            )
+                        }
+                    }
                 }
             }
+
+            self.alycepose?.apiClient.getExercise(exerciseId: Int32(exId)) { exerciseDef, error in
+                print("getExercise \(exerciseDef?.exerciseVideo) \(error)")
+            }
+
         }
     }
-    
-    
+
+
     private func configCameraCapture() {
         cameraFeedManager = CameraFeedManager()
         cameraFeedManager.delegate = self
@@ -146,7 +161,7 @@ final class SampleViewViewController: UIViewController{
             self.cameraFeedManager.startRunning()
         }
     }
-    
+
     private func loadModel() {
         // Update the model in the same serial queue with the inference logic to avoid race condition
         DispatchQueue.global().async {
@@ -156,16 +171,6 @@ final class SampleViewViewController: UIViewController{
                 os_log("Error: %@", log: .default, type: .error, String(describing: error))
             }
             self.configVideoPlayer()
-
-            DispatchQueue.main.async {
-                // setMode: Exercise
-                if let exId = self.exerciseId {
-                    try? self.alycepose?.setMode(mode: .Exercise,
-                                                 exerciseId: exId,
-                                                 exerciseListener: self
-                    )
-                }
-            }
         }
     }
 
@@ -201,26 +206,26 @@ extension SampleViewViewController: CameraFeedManagerDelegate {
     func cameraFeedManager(_ cameraFeedManager: CameraFeedManager, didOutput pixelBuffer: CVPixelBuffer) {
         self.runModel(pixelBuffer)
     }
-    
+
 
     /// Run pose estimation on the input frame from the camera.
     private func runModel(_ pixelBuffer: CVPixelBuffer) {
-        
+
         // Guard to make sure that there's only 1 frame process at each moment.
         guard !isRunning else { return }
-        
+
         // Guard to make sure that the pose estimator is already initialized.
         guard let estimator = alycepose else { return }
-        
+
         // Run inference on a serial queue to avoid race condition.
         queue.async {
             self.isRunning = true
             defer { self.isRunning = false }
-            
+
             // Run pose estimation
             do {
                 let result = try estimator.feedImage(on: pixelBuffer)
-                
+
                 // Return to main thread to show detection results on the app UI.
                 DispatchQueue.main.async {
                     // Visualize the pose estimation result.
@@ -264,3 +269,4 @@ extension UIColor {
        )
    }
 }
+
