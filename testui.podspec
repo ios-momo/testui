@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 	spec.name         = "testui"
-	spec.version      = "0.0.9"
+	spec.version      = "0.0.10"
 	spec.summary      = "Alyce Pose Ui framework"
 	spec.description  = <<-DESC
 Pose estimation and evaluation kit

@@ -67,10 +67,10 @@ public final class AlycePose: PoseDetector {
         case .Light:
             fileInfo = alyceNetLightFile
         }
-        let bundlePath = Bundle(for: AlycePose.self).path(forResource: "AlycePoseUiRes", ofType: "bundle")
-        let resBundle = Bundle(url: URL(fileURLWithPath: bundlePath!))
+        let bundlePath = Bundle(for: AlycePose.self)//.path(forResource: "AlycePoseUiRes", ofType: "bundle")
+//        let resBundle = Bundle(url: URL(fileURLWithPath: bundlePath!))
         guard
-            let modelPath = resBundle?.path(forResource: fileInfo.name, ofType: fileInfo.ext)
+            let modelPath = bundlePath.path(forResource: fileInfo.name, ofType: fileInfo.ext)
         else {
             fatalError("Failed to load the model file with name: \(fileInfo.name).")
         }
