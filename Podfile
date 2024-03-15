@@ -7,5 +7,8 @@ target 'testui' do
 
   # Pods for testui
   pod 'Alamofire', '~> 5.6.2'
+  pod 'TensorFlowLiteSwift', '2.12.0'
+  pod 'TensorFlowLiteSwift/CoreML', '2.12.0'
+  pod 'TensorFlowLiteSwift/Metal', '2.12.0'
 
 end
