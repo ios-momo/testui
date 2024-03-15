@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "testui"
-  spec.version      = "0.0.3"
-  spec.summary      = "A short description of testui."
+  spec.version      = "0.0.4"
+  spec.summary      = "testui framework good"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,11 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-Test DESC
+Test DESC Test DESC Test DESC Test DESC Test DESC
                       DESC
 
-  spec.homepage     = "http://EXAMPLE/testui"
+  spec.homepage     = "https://www.naver.com"
+  spec.swift_version    = '5'
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -40,7 +41,7 @@ Test DESC
   #
 
   # spec.license      = "MIT (example)"
-  spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
