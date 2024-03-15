@@ -1,12 +1,13 @@
 Pod::Spec.new do |spec|
 	spec.name         = "testui"
-	spec.version      = "0.0.5"
+	spec.version      = "0.0.6"
 	spec.summary      = "Alyce Pose Ui framework"
 	spec.description  = <<-DESC
 Pose estimation and evaluation kit
                       DESC
 
 	spec.homepage     = "https://not-needed-for-local-pod"
+	spec.static_framework = true
 	spec.swift_version    = '5'
 	spec.license      = { :type => "MIT", :file => "LICENSE" }
   	spec.author             = { "ryan" => "dev.ryan.cha@gmail.com" }
