@@ -10,6 +10,23 @@
 		5AD7DF270C4A493DD3840503 /* Pods_testui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1ED94B50AAE46D903CF4B75 /* Pods_testui.framework */; };
 		9F046DBB2BA3EA400075D299 /* testui.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F046DBA2BA3EA400075D299 /* testui.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F046DC22BA3EAFA0075D299 /* TestUIObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046DC12BA3EAFA0075D299 /* TestUIObject.swift */; };
+		9F046E042BA3F8DA0075D299 /* LibMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F046DEF2BA3F8DA0075D299 /* LibMain.storyboard */; };
+		9F046E052BA3F8DA0075D299 /* alycenet.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 9F046DF02BA3F8DA0075D299 /* alycenet.tflite */; };
+		9F046E062BA3F8DA0075D299 /* alycenet_light.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 9F046DF12BA3F8DA0075D299 /* alycenet_light.tflite */; };
+		9F046E072BA3F8DA0075D299 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046DF42BA3F8DA0075D299 /* OverlayView.swift */; };
+		9F046E082BA3F8DA0075D299 /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046DF52BA3F8DA0075D299 /* CameraFeedManager.swift */; };
+		9F046E092BA3F8DA0075D299 /* SampleViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046DF62BA3F8DA0075D299 /* SampleViewViewController.swift */; };
+		9F046E0A2BA3F8DA0075D299 /* AlyceposeUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046DF72BA3F8DA0075D299 /* AlyceposeUi.swift */; };
+		9F046E0B2BA3F8DA0075D299 /* Data+TFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046DF92BA3F8DA0075D299 /* Data+TFLite.swift */; };
+		9F046E0C2BA3F8DA0075D299 /* CGSize+TFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046DFA2BA3F8DA0075D299 /* CGSize+TFLite.swift */; };
+		9F046E0D2BA3F8DA0075D299 /* CVPixelBuffer+TFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046DFB2BA3F8DA0075D299 /* CVPixelBuffer+TFLite.swift */; };
+		9F046E0E2BA3F8DA0075D299 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046DFD2BA3F8DA0075D299 /* Logger.swift */; };
+		9F046E0F2BA3F8DA0075D299 /* Visualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046DFE2BA3F8DA0075D299 /* Visualization.swift */; };
+		9F046E102BA3F8DA0075D299 /* PoseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046E002BA3F8DA0075D299 /* PoseData.swift */; };
+		9F046E112BA3F8DA0075D299 /* PoseDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046E012BA3F8DA0075D299 /* PoseDetector.swift */; };
+		9F046E122BA3F8DA0075D299 /* AlyceNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046E022BA3F8DA0075D299 /* AlyceNet.swift */; };
+		9F046E132BA3F8DA0075D299 /* PoseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046E032BA3F8DA0075D299 /* PoseConfig.swift */; };
+		9F046E162BA3F8E20075D299 /* AlycePoseCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F046E152BA3F8E20075D299 /* AlycePoseCore.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +34,23 @@
 		9F046DB72BA3EA400075D299 /* testui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = testui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F046DBA2BA3EA400075D299 /* testui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testui.h; sourceTree = "<group>"; };
 		9F046DC12BA3EAFA0075D299 /* TestUIObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIObject.swift; sourceTree = "<group>"; };
+		9F046DEF2BA3F8DA0075D299 /* LibMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LibMain.storyboard; sourceTree = "<group>"; };
+		9F046DF02BA3F8DA0075D299 /* alycenet.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = alycenet.tflite; sourceTree = "<group>"; };
+		9F046DF12BA3F8DA0075D299 /* alycenet_light.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = alycenet_light.tflite; sourceTree = "<group>"; };
+		9F046DF42BA3F8DA0075D299 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		9F046DF52BA3F8DA0075D299 /* CameraFeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
+		9F046DF62BA3F8DA0075D299 /* SampleViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewViewController.swift; sourceTree = "<group>"; };
+		9F046DF72BA3F8DA0075D299 /* AlyceposeUi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlyceposeUi.swift; sourceTree = "<group>"; };
+		9F046DF92BA3F8DA0075D299 /* Data+TFLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+TFLite.swift"; sourceTree = "<group>"; };
+		9F046DFA2BA3F8DA0075D299 /* CGSize+TFLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+TFLite.swift"; sourceTree = "<group>"; };
+		9F046DFB2BA3F8DA0075D299 /* CVPixelBuffer+TFLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+TFLite.swift"; sourceTree = "<group>"; };
+		9F046DFD2BA3F8DA0075D299 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		9F046DFE2BA3F8DA0075D299 /* Visualization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visualization.swift; sourceTree = "<group>"; };
+		9F046E002BA3F8DA0075D299 /* PoseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseData.swift; sourceTree = "<group>"; };
+		9F046E012BA3F8DA0075D299 /* PoseDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseDetector.swift; sourceTree = "<group>"; };
+		9F046E022BA3F8DA0075D299 /* AlyceNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlyceNet.swift; sourceTree = "<group>"; };
+		9F046E032BA3F8DA0075D299 /* PoseConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseConfig.swift; sourceTree = "<group>"; };
+		9F046E152BA3F8E20075D299 /* AlycePoseCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AlycePoseCore.xcframework; sourceTree = "<group>"; };
 		D1ED94B50AAE46D903CF4B75 /* Pods_testui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58457CEC2DA8F096DCE21E2 /* Pods-testui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testui.release.xcconfig"; path = "Target Support Files/Pods-testui/Pods-testui.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -26,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F046E162BA3F8E20075D299 /* AlycePoseCore.xcframework in Frameworks */,
 				5AD7DF270C4A493DD3840503 /* Pods_testui.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +80,9 @@
 		9F046DAD2BA3EA3F0075D299 = {
 			isa = PBXGroup;
 			children = (
+				9F046E142BA3F8E20075D299 /* Frameworks */,
+				9F046DED2BA3F8DA0075D299 /* res */,
+				9F046DF22BA3F8DA0075D299 /* src */,
 				9F046DB92BA3EA400075D299 /* testui */,
 				9F046DB82BA3EA400075D299 /* Products */,
 				7C5B680422F4618FAAFE19DD /* Pods */,
@@ -67,6 +105,84 @@
 				9F046DC12BA3EAFA0075D299 /* TestUIObject.swift */,
 			);
 			path = testui;
+			sourceTree = "<group>";
+		};
+		9F046DED2BA3F8DA0075D299 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				9F046DEE2BA3F8DA0075D299 /* storyboards */,
+				9F046DF02BA3F8DA0075D299 /* alycenet.tflite */,
+				9F046DF12BA3F8DA0075D299 /* alycenet_light.tflite */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		9F046DEE2BA3F8DA0075D299 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9F046DEF2BA3F8DA0075D299 /* LibMain.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		9F046DF22BA3F8DA0075D299 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9F046DF32BA3F8DA0075D299 /* ui */,
+				9F046DF82BA3F8DA0075D299 /* extension */,
+				9F046DFC2BA3F8DA0075D299 /* util */,
+				9F046DFF2BA3F8DA0075D299 /* ml */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		9F046DF32BA3F8DA0075D299 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				9F046DF42BA3F8DA0075D299 /* OverlayView.swift */,
+				9F046DF52BA3F8DA0075D299 /* CameraFeedManager.swift */,
+				9F046DF62BA3F8DA0075D299 /* SampleViewViewController.swift */,
+				9F046DF72BA3F8DA0075D299 /* AlyceposeUi.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		9F046DF82BA3F8DA0075D299 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				9F046DF92BA3F8DA0075D299 /* Data+TFLite.swift */,
+				9F046DFA2BA3F8DA0075D299 /* CGSize+TFLite.swift */,
+				9F046DFB2BA3F8DA0075D299 /* CVPixelBuffer+TFLite.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		9F046DFC2BA3F8DA0075D299 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				9F046DFD2BA3F8DA0075D299 /* Logger.swift */,
+				9F046DFE2BA3F8DA0075D299 /* Visualization.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		9F046DFF2BA3F8DA0075D299 /* ml */ = {
+			isa = PBXGroup;
+			children = (
+				9F046E002BA3F8DA0075D299 /* PoseData.swift */,
+				9F046E012BA3F8DA0075D299 /* PoseDetector.swift */,
+				9F046E022BA3F8DA0075D299 /* AlyceNet.swift */,
+				9F046E032BA3F8DA0075D299 /* PoseConfig.swift */,
+			);
+			path = ml;
+			sourceTree = "<group>";
+		};
+		9F046E142BA3F8E20075D299 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F046E152BA3F8E20075D299 /* AlycePoseCore.xcframework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		D6ACAE81EA9666FBE8937AFF /* Frameworks */ = {
@@ -148,6 +264,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F046E052BA3F8DA0075D299 /* alycenet.tflite in Resources */,
+				9F046E062BA3F8DA0075D299 /* alycenet_light.tflite in Resources */,
+				9F046E042BA3F8DA0075D299 /* LibMain.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +302,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F046E132BA3F8DA0075D299 /* PoseConfig.swift in Sources */,
+				9F046E102BA3F8DA0075D299 /* PoseData.swift in Sources */,
+				9F046E122BA3F8DA0075D299 /* AlyceNet.swift in Sources */,
+				9F046E0A2BA3F8DA0075D299 /* AlyceposeUi.swift in Sources */,
+				9F046E0B2BA3F8DA0075D299 /* Data+TFLite.swift in Sources */,
 				9F046DC22BA3EAFA0075D299 /* TestUIObject.swift in Sources */,
+				9F046E092BA3F8DA0075D299 /* SampleViewViewController.swift in Sources */,
+				9F046E0F2BA3F8DA0075D299 /* Visualization.swift in Sources */,
+				9F046E112BA3F8DA0075D299 /* PoseDetector.swift in Sources */,
+				9F046E0E2BA3F8DA0075D299 /* Logger.swift in Sources */,
+				9F046E082BA3F8DA0075D299 /* CameraFeedManager.swift in Sources */,
+				9F046E0D2BA3F8DA0075D299 /* CVPixelBuffer+TFLite.swift in Sources */,
+				9F046E072BA3F8DA0075D299 /* OverlayView.swift in Sources */,
+				9F046E0C2BA3F8DA0075D299 /* CGSize+TFLite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

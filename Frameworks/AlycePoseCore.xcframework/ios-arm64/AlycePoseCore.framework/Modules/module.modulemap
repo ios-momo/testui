@@ -1,0 +1,8 @@
+framework module AlycePoseCore {
+    umbrella header "AlycePoseCore.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}
