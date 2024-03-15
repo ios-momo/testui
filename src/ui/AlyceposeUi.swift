@@ -5,7 +5,7 @@
 //  Created by Ryan Cha on 3/5/24.
 //
 
-import Foundation
+import UIKit
 import os
 
 public enum AlycePoseUiError: String, Error {
