@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		5AD7DF270C4A493DD3840503 /* Pods_testui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1ED94B50AAE46D903CF4B75 /* Pods_testui.framework */; };
 		9F046DBB2BA3EA400075D299 /* testui.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F046DBA2BA3EA400075D299 /* testui.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F046DC22BA3EAFA0075D299 /* TestUIObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F046DC12BA3EAFA0075D299 /* TestUIObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B7C664E33EBAB198D8F451B /* Pods-testui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testui.debug.xcconfig"; path = "Target Support Files/Pods-testui/Pods-testui.debug.xcconfig"; sourceTree = "<group>"; };
 		9F046DB72BA3EA400075D299 /* testui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = testui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F046DBA2BA3EA400075D299 /* testui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testui.h; sourceTree = "<group>"; };
+		9F046DC12BA3EAFA0075D299 /* TestUIObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIObject.swift; sourceTree = "<group>"; };
 		D1ED94B50AAE46D903CF4B75 /* Pods_testui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58457CEC2DA8F096DCE21E2 /* Pods-testui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testui.release.xcconfig"; path = "Target Support Files/Pods-testui/Pods-testui.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,7 +39,6 @@
 				5B7C664E33EBAB198D8F451B /* Pods-testui.debug.xcconfig */,
 				F58457CEC2DA8F096DCE21E2 /* Pods-testui.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -63,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				9F046DBA2BA3EA400075D299 /* testui.h */,
+				9F046DC12BA3EAFA0075D299 /* TestUIObject.swift */,
 			);
 			path = testui;
 			sourceTree = "<group>";
@@ -119,6 +121,7 @@
 				TargetAttributes = {
 					9F046DB62BA3EA400075D299 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F046DC22BA3EAFA0075D299 /* TestUIObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7C664E33EBAB198D8F451B /* Pods-testui.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -338,6 +343,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -347,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F58457CEC2DA8F096DCE21E2 /* Pods-testui.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
