@@ -38,12 +38,6 @@ Please check `screen_recording.mp4` for a demonstration.
         * A `Dictionary` to store the relationship between order `ID` and `Price`.
         * Two `B+Tree` instances (one for Buy, one for Sell) to store `OrderBookItem`s, keyed by `Price`.
     * Since IDs are unique and BitMEX samples might lack price/size on delete operations, the `ID` is used to find the `Price` first, and then `insert`, `update`, or `delete` operations are performed on the B+Trees.
-### Why a B+Tree was Chosen
-    * Frequent Modifications: The order book data involves frequent insertions, updates, and deletions.
-    * Efficient Range Scans: B+Trees are particularly well-suited for efficient range scans.
-    * Performance: B+Trees offer O(log n) time complexity for these operations.
-    * Implementation Basis: Adapted from the B-Tree code in the Kodeco Swift Algorithm Club.
-        * Reference: [B-Tree](https://github.com/kodecocodes/swift-algorithm-club/tree/master/B-Tree)
 * **View Logic Cycle**:
     * Flow
         1. Actions are sent to the store from the view.
@@ -58,6 +52,14 @@ Please check `screen_recording.mp4` for a demonstration.
             * Determines how the State changes in response to an Action and which Effects should be executed.
         * Effect
             * Represents side effects, such as asynchronous tasks or API calls.
+
+## Why a B+Tree was Chosen
+
+    * Frequent Modifications: The order book data involves frequent insertions, updates, and deletions.
+    * Efficient Range Scans: B+Trees are particularly well-suited for efficient range scans.
+    * Performance: B+Trees offer O(log n) time complexity for these operations.
+    * Implementation Basis: Adapted from the B-Tree code in the Kodeco Swift Algorithm Club.
+        * Reference: [B-Tree](https://github.com/kodecocodes/swift-algorithm-club/tree/master/B-Tree)
 
 ## How to Run
 
