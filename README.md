@@ -55,11 +55,11 @@ Please check `screen_recording.mp4` for a demonstration.
 
 ## Why a B+Tree was Chosen
 
-    * Frequent Modifications: The order book data involves frequent insertions, updates, and deletions.
-    * Efficient Range Scans: B+Trees are particularly well-suited for efficient range scans.
-    * Performance: B+Trees offer O(log n) time complexity for these operations.
-    * Implementation Basis: Adapted from the B-Tree code in the Kodeco Swift Algorithm Club.
-        * Reference: [B-Tree](https://github.com/kodecocodes/swift-algorithm-club/tree/master/B-Tree)
+* Frequent Modifications: The order book data involves frequent insertions, updates, and deletions.
+* Efficient Range Scans: B+Trees are particularly well-suited for efficient range scans.
+* Performance: B+Trees offer O(log n) time complexity for these operations.
+* Implementation Basis: Adapted from the B-Tree code in the Kodeco Swift Algorithm Club.
+    * Reference: [B-Tree](https://github.com/kodecocodes/swift-algorithm-club/tree/master/B-Tree)
 
 ## How to Run
 
