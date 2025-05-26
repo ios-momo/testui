@@ -45,9 +45,9 @@ Please check `screen_recording.mp4` for a demonstration.
     * `prefix()` and `suffix()` functions were added for efficient retrieval of top/bottom orders.
 * **View Logic Cycle**:
     * Flow
-        * Actions are sent to the store from the view.
-        * Then the reducer updates the state and returns effects.
-        * The store then executes these effects, which can feed new actions back into the system.
+        1. Actions are sent to the store from the view.
+        2. Then the reducer updates the state and returns effects.
+        3. The store then executes these effects, which can feed new actions back into the system.
     * Definition
         * Store
             * The runtime engine of the application.
